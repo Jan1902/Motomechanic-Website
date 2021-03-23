@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$dark: rgb(37, 37, 37);
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.head {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .navbar {
+        float: right;
+        padding: 1rem 1rem;
+
+        .nav-point {
+            margin: 1rem 2rem;
+            float: right;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &::after,
+            &::before {
+                display: block;
+                content: '';
+                border-bottom: solid 2px;
+                transform: scaleX(0);
+                transition: transform 250ms ease-in-out;
+            }
+
+            &::after {
+                margin-top: 5px;
+            }
+
+            &::before {
+                margin-bottom: 5px;
+            }
+
+            &:hover {
+                &::after,
+                &::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+section {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#sec-start {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    background-size: cover;
+
+    div {
+        font-size: 2rem;
+        color: white;
+        margin: 15rem 5rem;
+
+        img {
+            max-height: 15rem;
+            filter: invert(1);
+            margin-left: 2rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+#sec-01 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    div {
+        max-width: 70%;
+        max-height: 100%;
+        margin: auto 2rem;
+    }
+}
+
+#sec-02 {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/pic2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 3rem;
+    }
+
+    > div {
+        font-size: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 2rem;
+
+        div {
+            text-align: center;
+        }
+
+        img {
+            margin: auto;
+        }
+    }
+}
+
+#sec-03 {
+    text-align: center;
+    padding-top: 1rem;
+
+    iframe {
+        margin: 2rem 0;
+    }
+
+    > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+        max-width: 35%;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+#arrow-container {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin-left: -2.5rem;
+    cursor: pointer;
+
+    &:hover #arrow {
+        border-left: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+    }
+
+    #arrow {
+        position: absolute;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(-45deg);
+        animation-name: up-down;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        margin-left: calc(2.5rem - 12px);
+        height: 24px;
+        width: 24px;
+    }
+}
+
+
+@keyframes up-down {
+    0% {
+        transform: translateY(0px) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(15px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(-45deg);
+    }
+}
+
+.round-image-container {
+    border-radius: 50%;
+    background-color: white;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: auto;
+
+    .img {
+        width: 75%;
+    }
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: $dark;
+    color: white;
+
+    span {
+        display: block;
+        margin: .25rem 0;
+    }
+}
