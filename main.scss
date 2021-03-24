@@ -92,6 +92,37 @@ section {
             margin-top: 2rem;
         }
     }
+
+    #arrow-container {
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        width: 5rem;
+        height: 5rem;
+        margin-left: -2.5rem;
+        cursor: pointer;
+    
+        &:hover #arrow {
+            border-left: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+        }
+    
+        #arrow {
+            position: absolute;
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            transform: rotate(-45deg);
+            animation-name: up-down;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    #mobile-logo {
+        display: none;
+    }
 }
 
 #sec-01 {
@@ -211,35 +242,6 @@ section {
     }
 }
 
-#arrow-container {
-    position: absolute;
-    bottom: 5rem;
-    left: 50%;
-    width: 5rem;
-    height: 5rem;
-    margin-left: -2.5rem;
-    cursor: pointer;
-
-    &:hover #arrow {
-        border-left: 3px solid #fff;
-        border-bottom: 3px solid #fff;
-    }
-
-    #arrow {
-        position: absolute;
-        border-left: 2px solid #fff;
-        border-bottom: 2px solid #fff;
-        transform: rotate(-45deg);
-        animation-name: up-down;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        margin-left: calc(2.5rem - 12px);
-        height: 24px;
-        width: 24px;
-    }
-}
-
-
 @keyframes up-down {
     0% {
         transform: translateY(0px) rotate(-45deg);
@@ -261,5 +263,89 @@ footer {
     span {
         display: block;
         margin: .25rem 0;
+    }
+}
+
+@media only screen and (max-width: 600px) 
+{
+    .head .navbar .nav-point {
+        font-size: 1rem;
+        margin: .25rem;
+        user-select: none;
+    }
+
+    #sec-start {
+        text-align: center;
+
+        div {
+            margin: auto;
+            margin-top: 30vh;
+
+            img {
+                margin: auto;
+            }
+        }
+
+        #desktop-logo {
+            display: none;
+        }
+
+        #mobile-logo {
+            display: inline-block;
+        }
+    }
+
+    #sec-01 {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        
+        div {
+            margin: 2rem auto;
+
+            p {
+                display: block;
+                margin: auto;
+            }
+    
+            h2 {
+                margin: auto;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    #sec-02 div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #sec-03 .gallery {
+        grid-template-columns: repeat(1, 1fr);
+
+        .gallery-item:hover img {
+            transform: none;
+        }
+    }
+
+    #sec-04
+    {
+        div {
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto;
+        max-width: unset;
+
+            div {
+                text-align: center;
+                margin: 0 auto 1rem auto;
+            }
+        }
+
+        iframe {
+            width: 100vw !important;
+            margin-bottom: 0;
+        }
+    }
+
+    footer {
+        font-size: .8rem;
     }
 }

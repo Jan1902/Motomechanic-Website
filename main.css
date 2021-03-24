@@ -92,6 +92,41 @@ section {
   margin-top: 2rem;
 }
 
+#sec-start #arrow-container {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin-left: -2.5rem;
+  cursor: pointer;
+}
+
+#sec-start #arrow-container:hover #arrow {
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+#sec-start #arrow-container #arrow {
+  position: absolute;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-animation-name: up-down;
+          animation-name: up-down;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  height: 24px;
+  width: 24px;
+}
+
+#sec-start #mobile-logo {
+  display: none;
+}
+
 #sec-01 {
   display: -ms-grid;
   display: grid;
@@ -226,38 +261,6 @@ section {
   display: block;
 }
 
-#arrow-container {
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  width: 5rem;
-  height: 5rem;
-  margin-left: -2.5rem;
-  cursor: pointer;
-}
-
-#arrow-container:hover #arrow {
-  border-left: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-}
-
-#arrow-container #arrow {
-  position: absolute;
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-animation-name: up-down;
-          animation-name: up-down;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  margin-left: calc(2.5rem - 12px);
-  height: 24px;
-  width: 24px;
-}
-
 @-webkit-keyframes up-down {
   0% {
     -webkit-transform: translateY(0px) rotate(-45deg);
@@ -298,5 +301,77 @@ footer {
 footer span {
   display: block;
   margin: .25rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .head .navbar .nav-point {
+    font-size: 1rem;
+    margin: .25rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  #sec-start {
+    text-align: center;
+  }
+  #sec-start div {
+    margin: auto;
+    margin-top: 30vh;
+  }
+  #sec-start div img {
+    margin: auto;
+  }
+  #sec-start #desktop-logo {
+    display: none;
+  }
+  #sec-start #mobile-logo {
+    display: inline-block;
+  }
+  #sec-01 {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+  #sec-01 div {
+    margin: 2rem auto;
+  }
+  #sec-01 div p {
+    display: block;
+    margin: auto;
+  }
+  #sec-01 div h2 {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  #sec-02 div {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  #sec-03 .gallery {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  #sec-03 .gallery .gallery-item:hover img {
+    -webkit-transform: none;
+            transform: none;
+  }
+  #sec-04 div {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+    max-width: unset;
+  }
+  #sec-04 div div {
+    text-align: center;
+    margin: 0 auto 1rem auto;
+  }
+  #sec-04 iframe {
+    width: 100vw !important;
+    margin-bottom: 0;
+  }
+  footer {
+    font-size: .8rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
