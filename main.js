@@ -59,13 +59,16 @@ var slideIndex = 1;
 
 const advanceSlideShow = (n) => {
     var i;
-    //var x = document.getElementsByClassName("slider-image");
-    var x = $(".slider-image");
-    if(slideIndex + n > x.length) {
+    var x = document.getElementsByClassName("slider-image");
+    //var x = $(".slider-image");
+    if(slideIndex + n > x.length - 1) {
         slideIndex = 0;
     }
-    if(slideIndex + n < 0) {
+    else if(slideIndex + n < 0) {
         slideIndex = x.length - 1;
+    }
+    else {
+        slideIndex += n;
     }
 
     for(i = 0; i < x.length; i++) {
