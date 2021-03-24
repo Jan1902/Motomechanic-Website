@@ -26,7 +26,7 @@ body {
 }
 
 .head .navbar .nav-point {
-  margin: 1rem 2rem;
+  margin: 1rem 1rem;
   float: right;
   font-size: 1.2rem;
   cursor: pointer;
@@ -54,6 +54,11 @@ body {
 }
 
 .head .navbar .nav-point:hover::after, .head .navbar .nav-point:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.head .navbar .selected::after, .head .navbar .selected::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -113,7 +118,7 @@ section {
   background-position: top;
   background-size: cover;
   color: white;
-  padding: 1rem 0;
+  padding: 1rem 0 2rem 0;
   text-align: center;
 }
 
@@ -122,7 +127,7 @@ section {
 }
 
 #sec-02 > div {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -134,20 +139,55 @@ section {
   text-align: center;
 }
 
-#sec-02 > div img {
+#sec-02 > div h3 {
+  margin: 0;
+}
+
+#sec-02 > div p {
+  display: block;
+  margin-top: 5rem;
+  max-width: 50%;
   margin: auto;
+}
+
+#sec-02 > div .round-image-container {
+  border-radius: 50%;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: auto;
+}
+
+#sec-02 > div .round-image-container img {
+  width: 75%;
+  height: 75%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 #sec-03 {
   text-align: center;
+}
+
+#sec-03 img {
+  display: none;
+  margin: auto;
+  height: 50vh;
+}
+
+#sec-03 img:first-of-type {
+  display: block;
+}
+
+#sec-04 {
+  text-align: center;
   padding-top: 1rem;
 }
 
-#sec-03 iframe {
+#sec-04 iframe {
   margin: 2rem 0;
 }
 
-#sec-03 > div {
+#sec-04 > div {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -156,7 +196,7 @@ section {
   max-width: 35%;
 }
 
-#sec-03 > div span {
+#sec-04 > div span {
   display: block;
 }
 
@@ -220,18 +260,6 @@ section {
     -webkit-transform: translateY(0px) rotate(-45deg);
             transform: translateY(0px) rotate(-45deg);
   }
-}
-
-.round-image-container {
-  border-radius: 50%;
-  background-color: white;
-  width: 7.5rem;
-  height: 7.5rem;
-  margin: auto;
-}
-
-.round-image-container .img {
-  width: 75%;
 }
 
 footer {

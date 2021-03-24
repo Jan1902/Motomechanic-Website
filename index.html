@@ -4,20 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motomechanic</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="lib/aos/dist/aos.css">
     <script src="lib/jquery.js"></script>
     <script src="main.js"></script>
+    <script src="lib/aos/dist/aos.js"></script>
 </head>
+
 <header>
     <div class="head">
         <div class="navbar">
-            <a href="#sec-03" class="nav-point">Kontakt</a>
+            <a href="#sec-04" class="nav-point">Kontakt</a>
+            <a href="#sec-03" class="nav-point">Galerie</a>
             <a href="#sec-02" class="nav-point">Leistungen</a>
             <a href="#sec-01" class="nav-point">Über</a>
             <a href="#sec-start" class="nav-point">Start</a>
         </div>
     </div>
 </header>
+
 <body>
     <section id="sec-start">
         <div>
@@ -27,6 +31,7 @@
             <span id="arrow"></div>
         </a>
     </section>
+
     <section id="sec-01">
         <img data-aos="fade-right" src="images/pic1.jpg" alt="Motorräder vor der Werkstatt">
         <div data-aos="fade-left">
@@ -34,48 +39,69 @@
             <p>Wir sind eine kleine Motorradwerkstatt im schönen Bad Segeberg. Mit Leidenschaft und jahrzentelanger Erfahrung erledigen wir alle Arbeiten, die am Motorrad nötig sein könnten, egal ob Oldtimer, Youngtimer oder Roller</p>
         </div>
     </section>
+
     <section id="sec-02">
         <h2>Leistungen</h2>
         <div>
             <div data-aos="fade-up">
                 <div class="round-image-container">
-                    <img src="" alt="">
+                    <img src="images/icons/repair.png" alt="">
                 </div>
-                <p>Reperatur</p>
+                <h3>Reparatur</h3>
+                <p>Instandsetzung von Motorrädern aller Art</p>
             </div>
             <div data-aos="fade-up">
                 <div class="round-image-container">
-                    <img src="" alt="">
+                    <img src="images/icons/tuev.png" alt="">
                 </div>
-                <p>TÜV</p>
+                <h3>Untersuchung</h3>
+                <p>Hauptuntersuchung und Service</p>
             </div>
             <div data-aos="fade-up">
                 <div class="round-image-container">
-                    <img src="" alt="">
+                    <img src="images/icons/truck.png" alt="">
                 </div>
-                <p>Abholung</p>
+                <h3>Abholservice</h3>
+                <p>Abholung nicht fahrbereiter Motorräder</p>
             </div>
             <div data-aos="fade-up">
                 <div class="round-image-container">
-                    <img src="" alt="">
+                    <img src="images/icons/tires.png" alt="">
                 </div>
-                <p>Reperatur</p>
+                <h3>Reifenservice</h3>
+                <p>Reifenwechsel und Wuchten</p>
             </div>
             <div data-aos="fade-up">
                 <div class="round-image-container">
-                    <img src="" alt="">
+                    <img src="images/icons/welding.png" alt="">
                 </div>
-                <p>TÜV</p>
+                <h3>Schweißarbeiten</h3>
+                <p>Schweißarbeiten inkl. Edelstahl & Aluminium</p>
             </div>
             <div data-aos="fade-up">
                 <div class="round-image-container">
-                    <img src="" alt="">
+                    <img src="images/icons/laptop.png" alt="">
                 </div>
-                <p>Abholung</p>
+                <h3>Elektrik</h3>
+                <p>Beheben von Elektrikproblemen und Auslesen von Fehlern (BMW)</p>
             </div>
         </div>
     </section>
+
     <section id="sec-03">
+        <h2>Galerie</h2>
+        <div class="image-slider">
+            <img class="slider-image" src="images/pic3.jpg" alt="">
+            <img class="slider-image" src="images/pic4.jpg" alt="">
+            <img class="slider-image" src="images/pic5.jpg" alt="">
+            <img class="slider-image" src="images/pic6.jpg" alt="">
+            <img class="slider-image" src="images/pic7.jpg" alt="">
+            <button class="button-right" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="button-left" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+    </section>
+    
+    <section id="sec-04">
         <h2>Kontakt</h2>
         <div>
             <div data-aos="fade-right">
@@ -93,14 +119,19 @@
         <iframe data-aos="fade-up" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9392.004366950963!2d10.300563!3d53.9494884!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48c447a88cb4edf9!2sMotomechanic!5e0!3m2!1sde!2sde!4v1616495971106!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init(1500);
     </script>
 </body>
+
 <footer>
     <span>Copyright &copy; Motomechanic 2021</span>
-    <span><a href="">Impressum</a></span>
-    <span>Photos von <a>bla bla bla</a>.</span>
+    <span><a href="#sec-04">Impressum</a></span>
+    <span>Photos von <a href="/">bla bla bla</a>.</span>
+    <span>
+        Icons erstellt von <a href="https://www.flaticon.com/de/autoren/monkik" title="monkik">monkik</a>, 
+        <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
+        auf <a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a>
+    </span>
 </footer>
 </html>
